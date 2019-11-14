@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Add ingredients and doses</h1>
+  <%= form_for(@cocktail) do |f| %>
+    <p>Enter a ingredient: <%= f.text_field :ingredient, placeholder: "ingredient" %></p>
+    <p>Enter a dose: <%= f.text_field :dose, placeholder: "dose" %></p>
+    <%= f.submit class: "btn btn-primary"%>
+  <% end %>
+  <br>
+  <br>
+
+</div>

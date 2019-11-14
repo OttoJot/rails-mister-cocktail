@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Cocktails:</h1>
+  <% @cocktails.each do |cocktail|%>
+    <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+  <% end %>
+  <%= link_to 'Create a new cocktail', new_cocktail_path, class: 'btn btn-success'%>
+</div>
+
+
+
+
+
+
+
+
+#create a cocktail
+#on save you get an id
+#this id is assigned to a created instance of dose (which has 2 properties - dose.description && dose.ingredient.name)
+#they are accessible to a cocktail through dose
+
+cocktail.name
+cocktail.doses.each
+dose.ingredient.name
+dose.description

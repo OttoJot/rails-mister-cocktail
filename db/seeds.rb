@@ -37,7 +37,7 @@ puts "creating"
   dose = Dose.new(
     description: Faker::Food.measurement
   )
-  dose.save
+  dose.save!
   puts dose.description
 end
 puts "done with doses"

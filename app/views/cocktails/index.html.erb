@@ -8,6 +8,11 @@
       </li>
     <% end %>
   </ul>
+  <%= cl_image_tag("nszvfj0e8no0bvtugb91",
+      width: 400, height: 300, crop: :fill) %>
+
+  <%= cl_image_tag("og2cgz6tsjobc8tzjynz",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
   <br>
   <br>
   <%= link_to 'Create a new cocktail', new_cocktail_path, class: 'btn btn-success'%>

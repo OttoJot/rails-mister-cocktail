@@ -3,9 +3,11 @@
   <%= simple_form_for([cocktail, dose]) do |f| %>
     <p>Enter a ingredient: <%= f.association :ingredient %></p>
     <p>Enter amount: <%= f.input :description %></p>
+
     <%= f.submit class: "btn btn-info"%>
   <% end %>
   <br>
   <br>
 
 </div>
+

@@ -4,9 +4,11 @@
   <% @cocktail.doses.each do |dose|%>
     <p>Ingredients: <%= dose.ingredient.name %></p>
     <p>Amount: <%= dose.description %></p>
-    <%= link_to 'Delete' , cocktail_dose_path(@cocktail, dose),
+    <%= link_to 'Delete' , cocktail_doses_path(@cocktail, dose),
             method: :delete,
             data: { confirm: 'Are you sure?' }, class: 'btn btn-info' %>
+    <%= cl_image_tag("#{dose.cocktail.photo}",
+              width: 400, height: 300, crop: :fill) %>
   <% end %>
   <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
   <%= link_to 'Back to list', cocktails_path, class: 'btn btn-primary' %>

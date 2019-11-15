@@ -6,5 +6,5 @@ class Dose < ApplicationRecord
   validates :ingredient, presence: true, allow_blank: false
   validates :description, presence: true, allow_blank: false
   validates :cocktail, uniqueness: { scope: :ingredient }
-  # mount_uploader :photo, PhotoUploader
+  mount_uploader :photo, PhotoUploader
 end

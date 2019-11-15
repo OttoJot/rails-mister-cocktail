@@ -4,7 +4,5 @@
     <p>Enter a name: <%= f.text_field :name, placeholder: "name" %></p>
     <%= f.submit class: "btn btn-primary"%>
   <% end %>
-  <br>
-  <br>
-
+  <%= link_to 'Back to list', cocktails_path, class: 'btn btn-primary mt-2' %>
 </div>

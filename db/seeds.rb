@@ -1,69 +1,40 @@
 require 'faker'
 
-puts "Clearing ingredients db"
+# starting from here on with doses
+
+puts 'Clearing db doses'
+Dose.destroy_all
+
+puts 'Clearing db ingredients'
 Ingredient.destroy_all
-puts "creating"
+
+
+puts 'Clearing db cocktails'
+Cocktail.destroy_all
+
+puts 'creating db ingredients'
 10.times do
   ingredient = Ingredient.new(
     name: Faker::Food.ingredient
   )
-  puts ingredient.name
   ingredient.save
 end
-puts "done with ingredients"
+puts 'done with ingredients'
 
-
-
-puts "Clearing cocktails db"
-Cocktail.destroy_all
-
-
-puts "creating"
+puts 'Creating db cocktails'
 10.times do
   cocktail = Cocktail.new(
     name: Faker::Food.fruits
   )
   cocktail.save
 end
-puts "done with cocktails"
+puts 'done with cocktails'
 
-
-"Clearing doses db"
-Dose.destroy_all
-
-puts "creating"
-
+puts 'Creating db doses'
 10.times do
   dose = Dose.new(
     description: Faker::Food.measurement
   )
-  dose.save!
-  puts dose.description
+ dose.save
 end
-puts "done with doses"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+puts 'done with doses'
